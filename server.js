@@ -30,8 +30,8 @@ function upload_random_image(images){
         // status: 'New picture!', 
         /* Or you can pick random text from an array. */            
         status: random_from_array([
-          'New picture!',
-          'Check this out!'
+          '',
+          ''
         ]),
         media_ids: new Array(data.media_id_string)
       },
@@ -65,7 +65,7 @@ fs.readdir(__dirname + '/images', function(err, files) {
   */
     setInterval(function(){
       upload_random_image(images);
-    }, 10000);
+    }, 180000);
 
   /*
     Or you could use cron (code.tutsplus.com/tutorials/scheduling-tasks-with-cron-jobs--net-8800), in which case you just need:
